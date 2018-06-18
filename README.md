@@ -6,5 +6,5 @@ solving the same mnist classification problem using different libraries
 mnist-ml-libs --library=tflearn
 ```
 
-## Currently this is supporting these libraries.
+## Currently supporting libraries.
 * tflearn
