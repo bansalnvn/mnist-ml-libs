@@ -1,9 +1,3 @@
-'''Trains a simple convnet on the MNIST dataset.
-Gets to 99.25% test accuracy after 12 epochs
-(there is still a lot of margin for parameter tuning).
-16 seconds per epoch on a GRID K520 GPU.
-'''
-
 from __future__ import print_function
 import keras
 from keras.datasets import mnist
@@ -30,7 +24,7 @@ def __loadData():
     return X, Y, testX, testY
 
 
-# this function will take the dimenstion of the input image as the parameters.
+# this function will take the dimension of the input image as the parameters.
 def __defineNetwork(input_shape) -> object:
     num_classes = 10
     model = Sequential()
@@ -67,14 +61,6 @@ def __fitParameters():
     print('Test loss:', score[0])
     print('Test accuracy:', score[1])
 
-
-# x_train = x_train.astype('float32')
-# x_test = x_test.astype('float32')
-# x_train /= 255
-# x_test /= 255
-# print('x_train shape:', x_train.shape)
-# print(x_train.shape[0], 'train samples')
-# print(x_test.shape[0], 'test samples')
 
 # exposed function....
 def apply():
